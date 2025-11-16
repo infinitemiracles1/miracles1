@@ -20,7 +20,8 @@ export interface GroundingChunk {
 export type AspectRatio = "1:1" | "16:9" | "9:16" | "4:3" | "3:4";
 
 export interface VeoOperation {
-  name: string;
+  // FIX: `name` is optional in the SDK's `GenerateVideosOperation` type.
+  name?: string;
   done: boolean;
   response?: {
     generatedVideos: {

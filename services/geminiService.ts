@@ -1,12 +1,13 @@
 
+
 import { GoogleGenAI, GenerateContentResponse, Chat, Modality } from '@google/genai';
 import { AspectRatio, VeoOperation } from '../types';
 
 const getAiClient = () => {
-    if (!process.env.API_KEY) {
-        throw new Error("API_KEY environment variable not set");
-    }
-    return new GoogleGenAI({ apiKey: process.env.API_KEY });
+    // Pass an empty string if the API key is not set.
+    // This prevents the app from crashing on startup if the environment variable is missing.
+    // API calls will fail gracefully with an authentication error later.
+    return new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 };
 
 const HERO_SYSTEM_INSTRUCTION = `You are the system brain for The HERO Project™, a national, trauma-informed, AI-powered ecosystem designed to prevent veteran suicide, support recovery, and activate lifelong leadership.
@@ -155,7 +156,9 @@ export const generateVideoFromImage = async (prompt: string, imageBase64: string
 
 export const checkVideoOperation = async (operation: VeoOperation): Promise<VeoOperation> => {
     const ai = getAiClient();
-    return await ai.operations.getVideosOperation({ operation: operation });
+    // FIX: The `operation` object, while typed as `VeoOperation`, is a full `GenerateVideosOperation`
+    // object at runtime. Casting to `any` satisfies the type-checker which expects internal SDK properties.
+    return await ai.operations.getVideosOperation({ operation: operation as any });
 };
 
 export const analyzeImage = async (prompt: string, imageBase64: string, mimeType: string): Promise<string> => {
