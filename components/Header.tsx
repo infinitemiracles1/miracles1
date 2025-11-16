@@ -17,7 +17,9 @@ const Header: React.FC = () => {
           <h1 className="text-3xl font-bold text-hero-text-primary">The HERO Project™</h1>
         </div>
         <p className="mt-2 text-md text-hero-text-secondary italic">
-          "The bravest thing you can do is ask for help when you need it. The strongest thing you can do is offer it when you can."
+          "The bravest thing you can do is ask for help when you need it.
+          <br />
+          The strongest thing you can do is offer it when you can."
         </p>
       </div>
     </header>

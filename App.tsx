@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from './components/Header';
 import ConverseTab from './components/ConverseTab';
@@ -59,7 +58,7 @@ const App: React.FC = () => {
               <h2 className="text-3xl font-bold text-hero-accent mb-1">HERO VETS™</h2>
               <h2 className="text-3xl font-bold text-hero-text-primary">From Crisis to Contribution™</h2>
               <p className="mt-4 text-lg text-hero-text-secondary max-w-4xl mx-auto">
-                Welcome to HERO VETS, the integrated web platform of The HERO Project™, a revolutionary, AI-powered national ecosystem for <strong>H</strong>igh <strong>E</strong>mpathy, <strong>R</strong>isk <strong>O</strong>utreach, designed to prevent veteran suicide, support recovery, and activate lifelong leadership.
+                Welcome to HERO VETS™, a revolutionary, AI-powered national ecosystem that transforms the lives of veterans and their families.
               </p>
             </div>
 
@@ -111,6 +110,9 @@ const App: React.FC = () => {
       </main>
       <footer className="text-center py-4 text-hero-text-secondary text-sm">
         <p>THE HERO PROJECT™ — From Crisis to Contribution™</p>
+        <p className="mt-2 max-w-4xl mx-auto px-4">
+          The High Empathy, Risk Outreach (HERO) Project™ is a radical solution that innovates suicide screening and detection, medical care, wellness, and connection for veterans. HERO VETS™ initiates healing and activate lifelong leadership.
+        </p>
       </footer>
     </div>
   );
