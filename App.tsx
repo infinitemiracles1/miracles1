@@ -58,13 +58,19 @@ const App: React.FC = () => {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-hero-text-primary">From Crisis to Contribution™</h2>
               <p className="mt-4 text-lg text-hero-text-secondary max-w-4xl mx-auto">
-                The HERO Project™ is an AI-powered ecosystem designed to prevent veteran suicide, support recovery, and activate lifelong leadership. Below you'll find our trauma-informed conversational AI and a suite of tools for healing, wellness, and purpose-driven reintegration.
+                Welcome to The HERO Project™, a revolutionary, AI-powered national ecosystem for <strong>H</strong>igh <strong>E</strong>mpathy, <strong>R</strong>isk <strong>O</strong>utreach, designed to prevent veteran suicide, support recovery, and activate lifelong leadership.
               </p>
             </div>
 
             <Card className="mb-8 bg-hero-surface p-4 sm:p-6">
                <ConverseTab />
             </Card>
+            
+            <div className="text-center mb-8">
+                <p className="text-lg text-hero-text-secondary max-w-4xl mx-auto">
+                    Explore our integrated tools: HERO CHECK™ for immediate, compassionate crisis support; HERO CARE™ with its holistic healing tools, from guided meditations to claim support; HERO CARE FIT™ for trauma-informed adaptive fitness planning; and HERO CONNECT™ to find purpose through creative storytelling, publishing pathways, and family empowerment resources.
+                </p>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <Widget title="HERO CHECK™">
