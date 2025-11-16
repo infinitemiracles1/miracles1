@@ -55,32 +55,30 @@ const App: React.FC = () => {
       default:
         return (
           <>
-            <Card className="mb-6 bg-hero-surface p-4 sm:p-6">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-hero-text-primary">From Crisis to Contribution™</h2>
+              <p className="mt-4 text-lg text-hero-text-secondary max-w-4xl mx-auto">
+                The HERO Project™ is an AI-powered ecosystem designed to prevent veteran suicide, support recovery, and activate lifelong leadership. Below you'll find our trauma-informed conversational AI and a suite of tools for healing, wellness, and purpose-driven reintegration.
+              </p>
+            </div>
+
+            <Card className="mb-8 bg-hero-surface p-4 sm:p-6">
                <ConverseTab />
             </Card>
 
-            <div className="space-y-6">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold text-hero-accent tracking-wider">HERO VETS™</h2>
-                 <p className="mt-2 text-hero-text-secondary">
-                  An ecosystem of tools for healing, wellness, and purpose-driven reintegration.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <Widget title="HERO CHECK™">
-                  Crisis identification & real-time suicide risk triage. Provides immediate, calming support. For immediate help, contact the Veterans Crisis Line: <strong>Call or text 988, then press 1.</strong>
-                </Widget>
-                <Widget title="HERO CARE™" onClick={() => setPage('care')}>
-                  Healing, wellness & life admin. Access the Meditation Library, content analysis tools, and claims support resources.
-                </Widget>
-                <Widget title="HERO CARE FIT™" onClick={() => setPage('fitness')}>
-                  Trauma-informed fitness & somatic recovery. Get adaptive movement plans that honor your body's readiness.
-                </Widget>
-                <Widget title="HERO CONNECT™" onClick={() => setPage('connect')}>
-                  Purpose, family & storytelling. Explore the Pathway to Publishing, Family Hub, and creative tools.
-                </Widget>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <Widget title="HERO CHECK™">
+                Crisis identification & real-time suicide risk triage. Provides immediate, calming support. For immediate help, contact the Veterans Crisis Line: <strong>Call or text 988, then press 1.</strong>
+              </Widget>
+              <Widget title="HERO CARE™" onClick={() => setPage('care')}>
+                Healing, wellness & life admin. Access the Meditation Library, content analysis tools, and claims support resources.
+              </Widget>
+              <Widget title="HERO CARE FIT™" onClick={() => setPage('fitness')}>
+                Trauma-informed fitness & somatic recovery. Get adaptive movement plans that honor your body's readiness.
+              </Widget>
+              <Widget title="HERO CONNECT™" onClick={() => setPage('connect')}>
+                Purpose, family & storytelling. Explore the Pathway to Publishing, Family Hub, and creative tools.
+              </Widget>
             </div>
           </>
         );
