@@ -56,9 +56,10 @@ const App: React.FC = () => {
         return (
           <>
             <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-hero-accent mb-1">HERO VETS™</h2>
               <h2 className="text-3xl font-bold text-hero-text-primary">From Crisis to Contribution™</h2>
               <p className="mt-4 text-lg text-hero-text-secondary max-w-4xl mx-auto">
-                Welcome to The HERO Project™, a revolutionary, AI-powered national ecosystem for <strong>H</strong>igh <strong>E</strong>mpathy, <strong>R</strong>isk <strong>O</strong>utreach, designed to prevent veteran suicide, support recovery, and activate lifelong leadership.
+                Welcome to HERO VETS, the integrated web platform of The HERO Project™, a revolutionary, AI-powered national ecosystem for <strong>H</strong>igh <strong>E</strong>mpathy, <strong>R</strong>isk <strong>O</strong>utreach, designed to prevent veteran suicide, support recovery, and activate lifelong leadership.
               </p>
             </div>
 

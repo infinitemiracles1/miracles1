@@ -25,7 +25,8 @@ export interface VeoOperation {
   // FIX: `done` is optional in the SDK's `GenerateVideosOperation` type.
   done?: boolean;
   response?: {
-    generatedVideos: {
+    // FIX: The `generatedVideos` property is optional in the SDK's `GenerateVideosResponse` type, which caused assignment errors.
+    generatedVideos?: {
       // FIX: Removed the 'aspectRatio' property from the 'video' object below.
       // The Gemini SDK's `GenerateVideosOperation` response does not include this property on the `Video` type,
       // and its presence caused a type mismatch.
